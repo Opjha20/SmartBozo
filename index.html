@@ -4,31 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBozo - Learn Smarter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VSN31WC4K9');
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            color: #333333;
         }
-        header {
+
+        nav {
             background-color: #0066cc;
-            color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
         }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         .hero {
             text-align: center;
             padding: 50px;
             background-color: #f1f1f1;
         }
+
         .hero h1 {
             font-size: 2.5em;
         }
+
         .hero p {
             font-size: 1.2em;
             margin: 20px 0;
         }
+
         .cta-button {
             display: inline-block;
             background-color: #28a745;
@@ -38,72 +61,182 @@
             font-size: 1em;
             border-radius: 5px;
         }
-        .programs {
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        .carousel-slide {
+            display: none;
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .carousel-slide:first-child {
+            display: block;
+        }
+
+        .carousel-slide.vedic-math {
+            background-color: #28a745; /* Green background */
+            border: 3px solid #ffffff; /* Add border for better visibility */
+        }
+
+        .carousel-slide.vedic-math .cta-button {
+            background-color: #ffffff; /* White button */
+            color: #28a745; /* Green text */
+            border: 2px solid #28a745; /* Green border */
+        }
+
+        .carousel-slide.vedic-math .cta-button:hover {
+            background-color: #28a745; /* Green on hover */
+            color: #ffffff; /* White text on hover */
+        }
+
+        .featured-courses {
             padding: 40px;
             text-align: center;
+            background-color: #f9f9f9;
         }
-        .program-card {
-            display: inline-block;
-            margin: 20px;
+
+        .featured-courses h2 {
+            margin-bottom: 20px;
+        }
+
+        .course-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .course-card {
+            margin: 15px;
             padding: 20px;
             width: 250px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: center;
         }
+
+        .course-card h3 {
+            font-size: 1.5em;
+        }
+
+        .course-card p {
+            font-size: 1em;
+        }
+
+        .course-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .course-card a:hover {
+            background-color: #0056a3;
+        }
+
         footer {
             background-color: #0066cc;
             color: white;
             text-align: center;
             padding: 10px 0;
         }
-    </style>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-VSN31WC4K9');
-</script>
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-<nav style="background-color: #0066cc; padding: 10px; text-align: center;">
-    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">Home</a>
-    <a href="testimonials.html" style="color: white; text-decoration: none; margin: 0 15px;">Testimonials</a>
-    <a href="contact.html" style="color: white; text-decoration: none; margin: 0 15px;">Contact Us</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="courses.html">Courses</a>
 </nav>
-    <header>
-        <h1>SmartBozo</h1>
-        <p>Learn Smarter, Not Harder</p>
-    </header>
-    <section class="hero">
-        <h1>Welcome to SmartBozo</h1>
-        <p>Learn Complex Topics in Simple Snippets Daily on WhatsApp!</p>
-        <a href="https://wa.me/917977047646" class="cta-button">Sign Up Now</a>
-    </section>
-    <section class="programs">
-        <h2>Our Programs</h2>
-        <div class="program-card">
-    <h3>Economics Simplified</h3>
-    <p>Understand the global economy in just 5 minutes daily.</p>
-    <a href="economics.html" style="color: #0066cc; text-decoration: underline;">Learn More</a>
+
+<section class="hero">
+    <h1>Welcome to SmartBozo</h1>
+    <p>Learn Complex Topics in Simple Snippets Daily on WhatsApp!</p>
+    <a href="https://wa.me/917977047646" class="cta-button">Sign Up Now</a>
+</section>
+
+<div class="carousel">
+    <div class="carousel-slide" style="background-color: #0066cc;" aria-label="Economics Simplified">
+        <h1>Economics Simplified</h1>
+        <p>Understand complex economic concepts with simple daily snippets.</p>
+        <a href="economics.html" class="cta-button">Learn More</a>
+    </div>
+    <div class="carousel-slide vedic-math" aria-label="Vedic Math">
+        <h1>Vedic Math</h1>
+        <p>Master speedy calculations and impress everyone.</p>
+        <a href="vedic-math.html" class="cta-button">Learn More</a>
+    </div>
+    <div class="carousel-slide" style="background-color: #f6c90e;" aria-label="Space Exploration">
+        <h1>Space Exploration</h1>
+        <p>Dive into the mysteries of the universe with exciting snippets.</p>
+        <a href="space-exploration.html" class="cta-button">Learn More</a>
+    </div>
 </div>
 
-        <div class="program-card">
-    <h3>Vedic Math</h3>
-    <p>Master math tricks that make calculations fun and easy.</p>
-    <a href="vedic-math.html" style="color: #0066cc; text-decoration: underline;">Learn More</a>
-</div>
-<div class="program-card">
-    <h3>Taxes and Finance</h3>
-    <p>Learn how to manage taxes and finances effectively.</p>
-    <a href="taxes-and-finance.html" style="color: #0066cc; text-decoration: underline;">Learn More</a>
-</div>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
 
-    </section>
-    <footer style="background-color: #0066cc; color: white; text-align: center; padding: 10px 0;">
-    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | <a href="privacy-policy.html" style="color: white; text-decoration: underline;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a></p>
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 3000);
+</script>
+
+<section class="featured-courses">
+    <h2>Popular Courses</h2>
+    <div class="course-grid">
+        <div class="course-card">
+            <h3>Economics Simplified</h3>
+            <p>Daily articles and easy explanations.</p>
+            <a href="economics.html" class="cta-button">Explore</a>
+        </div>
+        <div class="course-card">
+            <h3>Vedic Math</h3>
+            <p>Speed up calculations with mental tricks.</p>
+            <a href="vedic-math.html" class="cta-button">Explore</a>
+        </div>
+        <div class="course-card">
+            <h3>Space Exploration</h3>
+            <p>Discover the wonders of the universe.</p>
+            <a href="space-exploration.html" class="cta-button">Explore</a>
+        </div>
+        <div class="course-card">
+            <h3>Everyday Finance</h3>
+            <p>Learn personal finance basics and taxes.</p>
+            <a href="taxes-and-finance.html" class="cta-button">Explore</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | 
+       <a href="privacy-policy.html">Privacy Policy</a> | 
+       <a href="terms-of-service.html">Terms of Service</a>
+    </p>
 </footer>
 </body>
 </html>

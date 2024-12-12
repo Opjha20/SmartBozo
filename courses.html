@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - SmartBozo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline styles for course page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #0066cc;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #f1f1f1;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .course-catalog {
+            padding: 40px;
+            text-align: center;
+        }
+        .course-catalog h2 {
+            margin-bottom: 20px;
+        }
+        .course-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .course-card {
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .course-card h3 {
+            font-size: 1.5em;
+        }
+        .course-card p {
+            font-size: 1em;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #0056a3;
+        }
+        .cta-banner {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .cta-banner h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .cta-banner p {
+            font-size: 1.2em;
+        }
+        .cta-banner .cta-button {
+            background-color: #28a745;
+            padding: 15px 25px;
+            font-size: 1.2em;
+        }
+        footer {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        footer a:hover {
+            text-decoration: none;
+        }
+        @media screen and (max-width: 768px) {
+            .course-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .course-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="courses.html">Courses</a>
+</nav>
+
+<section class="hero">
+    <h1>Explore All Courses</h1>
+    <p>Learn smarter with bite-sized lessons delivered daily on WhatsApp!</p>
+</section>
+
+<section class="course-catalog">
+    <h2>Our Courses</h2>
+    <div class="course-grid">
+        <div class="course-card">
+            <h3>Economics Simplified</h3>
+            <p>Daily articles with easy explanations of key concepts like GDP, inflation, and fiscal policies.</p>
+            <a href="economics.html" class="cta-button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Vedic Math</h3>
+            <p>Master speedy calculations with ancient techniques.</p>
+            <a href="vedic-math.html" class="cta-button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Everyday Finance</h3>
+            <p>Learn personal finance basics, including budgeting, saving, and taxes.</p>
+            <a href="taxes-and-finance.html" class="cta-button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Space Exploration</h3>
+            <p>Dive into the mysteries of the universe with exciting snippets.</p>
+            <a href="space-exploration.html" class="cta-button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Physics Fun</h3>
+            <p>Learn key concepts like Newton's laws, electricity, and magnetism in a fun way.</p>
+            <a href="physics-fun.html" class="cta-button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Political Science Basics</h3>
+            <p>Understand how governments function and explore key political ideologies.</p>
+            <a href="political-science.html" class="cta-button">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <h2>Ready to Start Learning?</h2>
+    <p>Join thousands of learners and start your journey today!</p>
+    <a href="https://wa.me/917977047646" class="cta-button">Sign Up on WhatsApp</a>
+</section>
+
+<footer>
+    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | 
+       <a href="privacy-policy.html">Privacy Policy</a> | 
+       <a href="terms-of-service.html">Terms of Service</a>
+    </p>
+</footer>
+</body>
+</html>
