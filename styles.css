@@ -69,31 +69,18 @@ footer a {
 footer a:hover {
     text-decoration: none;
 }
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger div {
-    background-color: white;
-    height: 3px;
-    width: 25px;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
 .mobile-nav {
     display: none;
     flex-direction: column;
     background-color: #0066cc;
-    position: absolute;
-    top: 100%;
+    position: fixed; /* Ensures the menu stays on top */
+    top: 60px; /* Adjust this based on your header's height */
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 9999; /* Ensure it appears above other elements */
     text-align: left;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional for a subtle shadow effect */
 }
 
 .mobile-nav a {
@@ -107,13 +94,3 @@ footer a:hover {
 .mobile-nav.active {
     display: flex;
 }
-
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
-    }
-    .hamburger {
-        display: flex;
-    }
-}
-
