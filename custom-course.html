@@ -52,8 +52,19 @@
     </style>
 </head>
 <body>
-<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
-    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+        });
+    });
+</script>
+
+<header>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #0066cc; color: white;">
         <div style="display: flex; align-items: center;">
             <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
             <div>
@@ -61,15 +72,28 @@
                 <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
             </div>
         </div>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-    <nav style="display: flex; gap: 15px; align-items: center;">
-        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
-        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
-        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
-        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
-        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
-    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
 </header>
+
 <section class="content">
     <h1>Custom Course</h1>
     <p>Tell us what you want to learn, and we'll create a personalized course just for you!</p>
