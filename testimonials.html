@@ -5,37 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials - SmartBozo</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .testimonials-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .testimonial-column {
+            flex: 0 0 48%; /* Each column takes 48% width */
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="courses.html">Courses</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="faqs.html">FAQs</a>
-</nav>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
+            <div>
+                <h1 style="margin: 0;">SmartBozo</h1>
+                <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
+            </div>
+        </div>
+    </div>
+    <nav style="display: flex; gap: 15px; align-items: center;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
+        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
+        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
+        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
+        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
+    </nav>
+</header>
 
-<section class="hero">
-    <h1>What Our Users Say</h1>
-    <p>Real stories from real learners.</p>
+<section style="text-align: center; padding: 40px; background-color: #f1f1f1;">
+    <h1 style="color: #0066cc;">What Our Learners Say</h1>
+    <p style="font-size: 1.2em; color: #555;">Read real stories from students who love SmartBozo!</p>
+    <div class="testimonials-container">
+        <!-- Left Column -->
+        <div class="testimonial-column">
+            <div class="testimonial-card">
+                <p><b>Rahul:</b> "SmartBozo's daily snippets make learning so easy and fun. I look forward to every snippet!"</p>
+            </div>
+            <div class="testimonial-card">
+                <p><b>Priya:</b> "Economics has always been hard for me, but now I understand it so well. Thank you, SmartBozo!"</p>
+            </div>
+            <div class="testimonial-card">
+                <p><b>Anjali:</b> "The Vedic Math course made calculations so much faster for me. Highly recommended!"</p>
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div class="testimonial-column">
+            <div class="testimonial-card">
+                <p><b>Vikram:</b> "Physics Fun is the best! The concepts are explained in such a practical and enjoyable way."</p>
+            </div>
+            <div class="testimonial-card">
+                <p><b>Megha:</b> "I subscribed to Space Exploration, and it's mind-blowing. Every snippet is fascinating."</p>
+            </div>
+            <div class="testimonial-card">
+                <p><b>Arjun:</b> "SmartBozo has made learning so convenient and interesting. Highly recommend it to students."</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="testimonials">
-    <div class="testimonial">
-        <p>"SmartBozo made economics so easy for me! I feel more confident now." - <b>Rahul S.</b></p>
-    </div>
-    <div class="testimonial">
-        <p>"Vedic Math tricks saved me so much time in exams. Highly recommend!" - <b>Sneha P.</b></p>
-    </div>
-    <div class="testimonial">
-        <p>"The space exploration snippets were mind-blowing. Great content!" - <b>Ankit T.</b></p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | 
-       <a href="privacy-policy.html">Privacy Policy</a> | 
-       <a href="terms-of-service.html">Terms of Service</a>
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
+    <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
+    <p>
+        <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
+        <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a>
     </p>
 </footer>
 </body>

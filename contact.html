@@ -6,100 +6,70 @@
     <title>Contact Us - SmartBozo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Inline styles for the form */
-        .lead-form {
-            text-align: center;
-            padding: 40px;
-            margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            width: 80%;
-        }
-
-        .lead-form h2 {
-            color: #0066cc;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .lead-form form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .lead-form label {
-            display: block;
-            font-size: 1em;
-            margin-bottom: 5px;
-            text-align: left;
-        }
-
-        .lead-form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .lead-form button {
-            background-color: #28a745;
-            color: white;
+        .cta-button {
             padding: 10px 20px;
+            background: linear-gradient(to right, #005bb5, #007bff);
+            color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             font-size: 1em;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .lead-form button:hover {
-            background-color: #218838;
+        .cta-button:hover {
+            background: linear-gradient(to right, #007bff, #005bb5);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
 <body>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="courses.html">Courses</a>
-    <a href="faqs.html">FAQs</a>
-</nav>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
+            <div>
+                <h1 style="margin: 0;">SmartBozo</h1>
+                <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
+            </div>
+        </div>
+    </div>
+    <nav style="display: flex; gap: 15px; align-items: center;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
+        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
+        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
+        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
+        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
+    </nav>
+</header>
 
-<section class="hero">
-    <h1>Contact Us</h1>
-    <p>We'd love to hear from you. Reach out to us anytime!</p>
+<section style="text-align: center; padding: 40px; background-color: #f1f1f1;">
+    <h1 style="color: #0066cc;">Get in Touch</h1>
+    <p style="font-size: 1.2em; color: #555;">We'd love to hear from you. Reach out anytime!</p>
+    <button class="cta-button" onclick="location.href='https://wa.me/917977047646'">WhatsApp Us</button>
+    <button class="cta-button" onclick="location.href='mailto:hello@smartbozo.com'">Email Us</button>
 </section>
 
-<section class="contact-details">
-    <h2>Get in Touch</h2>
-    <p><b>Email:</b> hello@smartbozo.com</p>
-    <p><b>WhatsApp:</b> <a href="https://wa.me/917977047646">+91 79770 47646</a></p>
-    <p><b>Address:</b> 1A, Neighbourhood Society, Mumbai, India</p>
-</section>
-
-<section class="lead-form">
-    <h2>Subscribe to Our Whatsapp letter</h2>
-    <form action="https://formsubmit.co/hello@smartbozo.com" method="POST">
+<section style="text-align: center; padding: 40px; background-color: #f9f9f9;">
+    <h2 style="color: #0066cc;">Subscribe to Our WhatsApp Letter</h2>
+    <form action="https://formsubmit.co/hello@smartbozo.com" method="POST" style="max-width: 500px; margin: 0 auto;">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required>
-        
-        <button type="submit">Subscribe</button>
+        <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+        <button type="submit" class="cta-button">Subscribe</button>
     </form>
 </section>
 
-<footer>
-    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | 
-       <a href="privacy-policy.html">Privacy Policy</a> | 
-       <a href="terms-of-service.html">Terms of Service</a>
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
+    <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
+    <p>
+        <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
+        <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a>
     </p>
 </footer>
 </body>

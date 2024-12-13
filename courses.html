@@ -6,181 +6,91 @@
     <title>Courses - SmartBozo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Inline styles for course page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        nav {
-            background-color: #0066cc;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background-color: #f1f1f1;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .course-catalog {
-            padding: 40px;
-            text-align: center;
-        }
-        .course-catalog h2 {
-            margin-bottom: 20px;
-        }
-        .course-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .course-card {
-            margin: 15px;
-            padding: 20px;
-            width: 250px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: center;
-        }
-        .course-card h3 {
-            font-size: 1.5em;
-        }
-        .course-card p {
-            font-size: 1em;
-        }
+        /* Button Styling (Matches Homepage) */
         .cta-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #0066cc;
+            padding: 8px 15px;
+            background: linear-gradient(to right, #005bb5, #007bff); /* Gradient matching nav bar */
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .cta-button:hover {
-            background-color: #0056a3;
-        }
-        .cta-banner {
-            background-color: #0066cc;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-        .cta-banner h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .cta-banner p {
-            font-size: 1.2em;
-        }
-        .cta-banner .cta-button {
-            background-color: #28a745;
-            padding: 15px 25px;
-            font-size: 1.2em;
-        }
-        footer {
-            background-color: #0066cc;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        footer a {
-            color: white;
-            text-decoration: underline;
-        }
-        footer a:hover {
-            text-decoration: none;
-        }
-        @media screen and (max-width: 768px) {
-            .course-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .course-card {
-                width: 90%;
-            }
+            background: linear-gradient(to right, #007bff, #005bb5); /* Reversed gradient on hover */
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
         }
     </style>
 </head>
 <body>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="courses.html">Courses</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="faqs.html">FAQs</a>
-</nav>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
+            <div>
+                <h1 style="margin: 0;">SmartBozo</h1>
+                <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
+            </div>
+        </div>
+    </div>
+    <nav style="display: flex; gap: 15px; align-items: center;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
+        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
+        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
+        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
+        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
+    </nav>
+</header>
 
-<section class="hero">
-    <h1>Explore All Courses</h1>
-    <p>Learn smarter with bite-sized lessons delivered daily on WhatsApp!</p>
+<section class="hero" style="text-align: center; padding: 30px 20px; background-color: #f1f1f1;">
+    <h1 style="font-size: 2.5em; color: #0066cc;">Available Courses</h1>
+    <p style="font-size: 1.2em; color: #555;">Explore our wide range of courses designed to make learning simple and fun.</p>
 </section>
 
-<section class="course-catalog">
-    <h2>Our Courses</h2>
-    <div class="course-grid">
-        <div class="course-card">
+<section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
+    <div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
             <h3>Economics Simplified</h3>
-            <p>Daily articles with easy explanations of key concepts like GDP, inflation, and fiscal policies.</p>
-            <a href="economics.html" class="cta-button">Learn More</a>
+            <p>Daily articles and easy explanations.</p>
+            <button class="cta-button" onclick="location.href='economics.html'">Learn More</button>
         </div>
-        <div class="course-card">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
             <h3>Vedic Math</h3>
-            <p>Master speedy calculations with ancient techniques.</p>
-            <a href="vedic-math.html" class="cta-button">Learn More</a>
+            <p>Speed up calculations with mental tricks.</p>
+            <button class="cta-button" onclick="location.href='vedic-math.html'">Learn More</button>
         </div>
-        <div class="course-card">
-            <h3>Everyday Finance</h3>
-            <p>Learn personal finance basics, including budgeting, saving, and taxes.</p>
-            <a href="taxes-and-finance.html" class="cta-button">Learn More</a>
-        </div>
-        <div class="course-card">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
             <h3>Space Exploration</h3>
-            <p>Dive into the mysteries of the universe with exciting snippets.</p>
-            <a href="space-exploration.html" class="cta-button">Learn More</a>
+            <p>Discover the wonders of the universe.</p>
+            <button class="cta-button" onclick="location.href='space-exploration.html'">Learn More</button>
         </div>
-        <div class="course-card">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+            <h3>Everyday Finance</h3>
+            <p>Learn personal finance basics and taxes.</p>
+            <button class="cta-button" onclick="location.href='taxes-and-finance.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
             <h3>Physics Fun</h3>
-            <p>Learn key concepts like Newton's laws, electricity, and magnetism in a fun way.</p>
-            <a href="physics-fun.html" class="cta-button">Learn More</a>
+            <p>Understand physics with engaging examples.</p>
+            <button class="cta-button" onclick="location.href='physics-fun.html'">Learn More</button>
         </div>
-        <div class="course-card">
-            <h3>Political Science Basics</h3>
-            <p>Understand how governments function and explore key political ideologies.</p>
-            <a href="political-science.html" class="cta-button">Learn More</a>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+            <h3>Political Science</h3>
+            <p>Understand how governments work.</p>
+            <button class="cta-button" onclick="location.href='political-science.html'">Learn More</button>
         </div>
     </div>
 </section>
 
-<section class="cta-banner">
-    <h2>Ready to Start Learning?</h2>
-    <p>Join thousands of learners and start your journey today!</p>
-    <a href="https://wa.me/917977047646" class="cta-button">Sign Up on WhatsApp</a>
-</section>
-
-<footer>
-    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | 
-       <a href="privacy-policy.html">Privacy Policy</a> | 
-       <a href="terms-of-service.html">Terms of Service</a>
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px; margin-top: 40px; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);">
+    <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
+    <p>
+        <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
+        <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a>
     </p>
 </footer>
 </body>
