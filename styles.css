@@ -24,51 +24,6 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 50px;
-    background-color: #f1f1f1;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    color: #0066cc;
-}
-
-.hero p {
-    font-size: 1.2em;
-    color: #555555;
-}
-
-/* Contact & Testimonials Sections */
-.contact-details, .testimonials {
-    text-align: center;
-    padding: 40px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #0066cc;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: underline;
-}
-
-footer a:hover {
-    text-decoration: none;
-}
 .mobile-nav {
     display: none;
     flex-direction: column;
@@ -113,4 +68,50 @@ footer a:hover {
 .mobile-nav.active {
     display: flex;
     transform: translateY(0); /* Slide in */
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #0066cc;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555555;
+}
+
+/* Contact & Testimonials Sections */
+.contact-details, .testimonials {
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
 }
