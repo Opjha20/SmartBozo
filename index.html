@@ -34,6 +34,14 @@
     </style>
 </head>
 <body>
+<!-- Include Navigation -->
+    <div id="navigation"></div>
+    <script>
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
 <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
     <div style="display: flex; flex-direction: column; align-items: flex-start;">
         <div style="display: flex; align-items: center;">
