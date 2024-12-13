@@ -26,14 +26,47 @@
     </style>
 </head>
 <body>
-<div id="navigation"></div>
 <script>
-    fetch("navigation.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("navigation").innerHTML = data;
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
         });
+    });
 </script>
+
+<header>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #0066cc; color: white;">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
+            <div>
+                <h1 style="margin: 0;">SmartBozo</h1>
+                <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
+            </div>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+</header>
 
 
 <section style="text-align: center; padding: 40px; background-color: #f1f1f1;">
