@@ -135,8 +135,8 @@ footer a:hover {
     display: none;
     flex-direction: column;
     background-color: #0066cc;
-    position: fixed;
-    top: 70px;
+    position: absolute; /* Changed from fixed to absolute */
+    top: 100%; /* Ensures menu appears below the navigation bar */
     left: 0;
     width: 100%;
     z-index: 9999;
@@ -157,22 +157,26 @@ footer a:hover {
 
 .mobile-nav.active {
     display: flex;
-    transform: translateY(0);
+    transform: translateY(0); /* Sliding animation */
 }
 
 @media (max-width: 768px) {
     .desktop-nav {
-        display: none;
+        display: none; /* Hides the desktop navigation menu */
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Shows the hamburger menu */
+    }
+
+    header {
+        position: relative; /* Ensures proper stacking of header and mobile nav */
+        z-index: 10000;
     }
 }
 
 @media (min-width: 769px) {
     .mobile-nav {
-        display: none;
+        display: none; /* Hides mobile navigation on larger screens */
     }
 }
-

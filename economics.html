@@ -31,20 +31,28 @@
         const hamburger = document.getElementById('hamburger');
         const mobileNav = document.getElementById('mobileNav');
 
+        // Toggle the mobile navigation menu
         hamburger.addEventListener("click", () => {
-            mobileNav.classList.toggle("active");
+            if (mobileNav.classList.contains("active")) {
+                mobileNav.style.transform = "translateY(-100%)"; // Slide out
+                setTimeout(() => mobileNav.classList.remove("active"), 300); // Wait for animation
+            } else {
+                mobileNav.classList.add("active");
+                mobileNav.style.transform = "translateY(0)"; // Slide in
+            }
         });
     });
-	
 </script>
 
-<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
+
+<header style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
     <div style="display: flex; align-items: center;">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
             <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
             <div>
                 <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
+                <!-- Ensure this paragraph has white color -->
+                <p style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
             </div>
         </a>
     </div>
@@ -61,6 +69,13 @@
         <div></div>
     </div>
 </header>
+<div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="faqs.html">FAQs</a>
+</div>
 <section style="text-align: center; padding: 40px; background-color: #f1f1f1;">
     <h1 style="color: #0066cc;">Economics Simplified</h1>
     <p style="font-size: 1.2em; color: #555;">Understand how the world works through economics. Daily lessons cover topics like inflation, trade, and policies in just 5 minutes.</p>
