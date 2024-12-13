@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Course - SmartBozo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+        .content { padding: 40px; text-align: center; }
+        .content h1 { font-size: 2.5em; margin-bottom: 20px; }
+        .content p { font-size: 1.2em; margin: 20px 0; }
+        .form-container { 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            max-width: 500px; 
+            margin: auto; 
+            text-align: left; 
+        }
+        .form-container label { 
+            display: block; 
+            margin: 10px 0 5px; 
+        }
+        .form-container input, 
+        .form-container textarea, 
+        .form-container select { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 15px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            font-size: 1em; 
+            box-sizing: border-box; 
+        }
+        .form-container select { 
+            appearance: none; 
+        }
+        .form-container button { 
+            background: linear-gradient(to right, #0066cc, #005bb5); 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1em; 
+            cursor: pointer; 
+        }
+        .form-container button:hover { 
+            background: linear-gradient(to right, #005bb5, #0066cc); 
+        }
+    </style>
+</head>
+<body>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <div style="display: flex; align-items: center;">
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
+            <div>
+                <h1 style="margin: 0;">SmartBozo</h1>
+                <p style="margin: 0; font-size: 0.9em;">Learn Smarter, Not Harder</p>
+            </div>
+        </div>
+    </div>
+    <nav style="display: flex; gap: 15px; align-items: center;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
+        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
+        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
+        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
+        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
+    </nav>
+</header>
+<section class="content">
+    <h1>Custom Course</h1>
+    <p>Tell us what you want to learn, and we'll create a personalized course just for you!</p>
+    <div class="form-container">
+        <form action="https://formsubmit.co/hello@smartbozo.com" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="requirements">What do you want to learn?</label>
+            <textarea id="requirements" name="requirements" rows="5" required></textarea>
+            
+            <label for="complexity">Preferred Complexity (Basic/Intermediate/Advanced):</label>
+            <input type="text" id="complexity" name="complexity" required>
+            
+            <label for="days">How many days to complete the course?</label>
+            <select id="days" name="days" required>
+                <option value="10">10 days</option>
+                <option value="21">21 days</option>
+                <option value="35">35 days</option>
+                <option value="50">50 days</option>
+                <option value="75">75 days</option>
+                <option value="flexible">Flexible</option>
+            </select>
+            
+            <button type="submit">Submit Your Request</button>
+        </form>
+    </div>
+</section>
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
+    <p>© 2024 SmartBozo.com (part of JB Deals & Advisory) | 
+       <a href="privacy-policy.html" style="color: white; text-decoration: underline;">Privacy Policy</a> | 
+       <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a>
+    </p>
+</footer>
+</body>
+</html>

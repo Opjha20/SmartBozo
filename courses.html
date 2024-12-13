@@ -9,7 +9,7 @@
         /* Button Styling (Matches Homepage) */
         .cta-button {
             padding: 8px 15px;
-            background: linear-gradient(to right, #005bb5, #007bff); /* Gradient matching nav bar */
+            background: linear-gradient(to right, #005bb5, #007bff);
             color: white;
             border: none;
             border-radius: 20px;
@@ -20,9 +20,21 @@
         }
 
         .cta-button:hover {
-            background: linear-gradient(to right, #007bff, #005bb5); /* Reversed gradient on hover */
-            transform: scale(1.05); /* Slight zoom on hover */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+            background: linear-gradient(to right, #007bff, #005bb5);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .highlight {
+            background-color: #e0f7fa;
+            border: 2px solid #007bff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-custom {
+            background-color: #d0f0c0;
+            border: 2px solid #28a745;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -53,35 +65,50 @@
 
 <section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
     <div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card highlight" style="padding: 20px; width: 250px; border-radius: 10px;">
             <h3>Economics Simplified</h3>
-            <p>Daily articles and easy explanations.</p>
+            <p>Daily article explanations with concepts from Economic Times or Financial Express.</p>
             <button class="cta-button" onclick="location.href='economics.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card highlight-custom" style="padding: 20px; width: 250px; border-radius: 10px;">
+            <h3>Custom Courses</h3>
+            <p>Get a course tailored to your unique needs and preferences!</p>
+            <button class="cta-button" onclick="location.href='custom-course.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Vedic Math</h3>
             <p>Speed up calculations with mental tricks.</p>
             <button class="cta-button" onclick="location.href='vedic-math.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Space Exploration</h3>
             <p>Discover the wonders of the universe.</p>
             <button class="cta-button" onclick="location.href='space-exploration.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Everyday Finance</h3>
             <p>Learn personal finance basics and taxes.</p>
             <button class="cta-button" onclick="location.href='taxes-and-finance.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Physics Fun</h3>
             <p>Understand physics with engaging examples.</p>
             <button class="cta-button" onclick="location.href='physics-fun.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Political Science</h3>
             <p>Understand how governments work.</p>
             <button class="cta-button" onclick="location.href='political-science.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Business Models</h3>
+            <p>Learn about different business models in a daily snippet.</p>
+            <button class="cta-button" onclick="location.href='business-models.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>History Stories</h3>
+            <p>Discover an intriguing historical story daily.</p>
+            <button class="cta-button" onclick="location.href='history-stories.html'">Learn More</button>
         </div>
     </div>
 </section>

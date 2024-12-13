@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBozo - Learn Smarter</title>
     <link rel="stylesheet" href="styles.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VSN31WC4K9');
-    </script>
     <style>
         /* Button Styling */
         .cta-button {
             padding: 8px 15px;
-            background: linear-gradient(to right, #005bb5, #007bff); /* Gradient matching nav bar */
+            background: linear-gradient(to right, #005bb5, #007bff);
             color: white;
             border: none;
             border-radius: 20px;
@@ -27,21 +20,43 @@
         }
 
         .cta-button:hover {
-            background: linear-gradient(to right, #007bff, #005bb5); /* Reversed gradient on hover */
-            transform: scale(1.05); /* Slight zoom on hover */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+            background: linear-gradient(to right, #007bff, #005bb5);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-slide {
+            display: none;
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+
+        .carousel-slide:first-child {
+            display: block;
+        }
+
+        .highlight {
+            background-color: #e0f7fa;
+            border: 2px solid #007bff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-custom {
+            background-color: #d0f0c0;
+            border: 2px solid #28a745;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VSN31WC4K9');
+    </script>
 </head>
 <body>
-<!-- Include Navigation -->
-    <div id="navigation"></div>
-    <script>
-        fetch('navigation.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('navigation').innerHTML = data)
-            .catch(error => console.error('Error loading navigation:', error));
-    </script>
 <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
     <div style="display: flex; flex-direction: column; align-items: flex-start;">
         <div style="display: flex; align-items: center;">
@@ -67,72 +82,127 @@
 </section>
 
 <div class="carousel">
-    <div class="carousel-slide" style="background-color: #0066cc; color: white; padding: 50px; text-align: center;">
+    <div class="carousel-slide" style="background-color: #0066cc;">
         <h1>Economics Simplified</h1>
-        <p>Understand complex economic concepts with simple daily snippets.</p>
+        <p>Receive daily snippets with simplified explanations of articles from Economic Times or Financial Express, along with key concepts you need to know!</p>
         <button class="cta-button" onclick="location.href='economics.html'">Learn More</button>
     </div>
-    <div class="carousel-slide" style="background-color: #28a745; color: white; padding: 50px; text-align: center;">
-        <h1>Vedic Math</h1>
-        <p>Master speedy calculations and impress everyone.</p>
-        <button class="cta-button" onclick="location.href='vedic-math.html'">Learn More</button>
+    <div class="carousel-slide" style="background-color: #28a745;">
+        <h1>Custom Courses</h1>
+        <p>Have unique learning needs? Let us design a custom course tailored just for you! It's learning, your way.</p>
+        <button class="cta-button" onclick="location.href='custom-course.html'">Learn More</button>
     </div>
-    <div class="carousel-slide" style="background-color: #f6c90e; color: white; padding: 50px; text-align: center;">
-        <h1>Space Exploration</h1>
-        <p>Dive into the mysteries of the universe with exciting snippets.</p>
-        <button class="cta-button" onclick="location.href='space-exploration.html'">Learn More</button>
+    <div class="carousel-dots" style="text-align: center; margin-top: 20px;">
+        <span class="dot active" onclick="showSlide(0)"></span>
+        <span class="dot" onclick="showSlide(1)"></span>
     </div>
 </div>
+
 <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
-    setInterval(() => {
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
         slides[currentSlide].style.display = 'none';
-        currentSlide = (currentSlide + 1) % slides.length;
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
         slides[currentSlide].style.display = 'block';
+        dots[currentSlide].classList.add('active');
+    }
+
+    // Auto-slide functionality
+    setInterval(() => {
+        showSlide((currentSlide + 1) % slides.length);
     }, 3000);
 </script>
+
 <style>
-    .carousel-slide { display: none; }
-    .carousel-slide:first-child { display: block; }
+    /* Dots Styling */
+    .carousel-dots {
+        margin-top: 20px;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+        background-color: #007bff;
+    }
+
+    .carousel-slide {
+        display: none;
+        text-align: center;
+        padding: 50px;
+        color: white;
+    }
+
+    .carousel-slide:first-child {
+        display: block;
+    }
 </style>
+
 
 <section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
     <h2 style="font-size: 2em; margin-bottom: 20px;">Popular Courses</h2>
     <div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card highlight" style="padding: 20px; width: 250px; border-radius: 10px;">
             <h3>Economics Simplified</h3>
-            <p>Daily articles and easy explanations.</p>
+            <p>Daily article explanations with concepts from Economic Times or Financial Express.</p>
             <button class="cta-button" onclick="location.href='economics.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card highlight-custom" style="padding: 20px; width: 250px; border-radius: 10px;">
+            <h3>Custom Courses</h3>
+            <p>Get a course tailored to your unique needs and preferences!</p>
+            <button class="cta-button" onclick="location.href='custom-course.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Vedic Math</h3>
             <p>Speed up calculations with mental tricks.</p>
             <button class="cta-button" onclick="location.href='vedic-math.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Space Exploration</h3>
             <p>Discover the wonders of the universe.</p>
             <button class="cta-button" onclick="location.href='space-exploration.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Everyday Finance</h3>
             <p>Learn personal finance basics and taxes.</p>
             <button class="cta-button" onclick="location.href='taxes-and-finance.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Physics Fun</h3>
             <p>Understand physics with engaging examples.</p>
             <button class="cta-button" onclick="location.href='physics-fun.html'">Learn More</button>
         </div>
-        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
             <h3>Political Science</h3>
             <p>Understand how governments work.</p>
             <button class="cta-button" onclick="location.href='political-science.html'">Learn More</button>
         </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Business Models</h3>
+            <p>Learn about different business models in a daily snippet.</p>
+            <button class="cta-button" onclick="location.href='business-models.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>History Stories</h3>
+            <p>Discover an intriguing historical story daily.</p>
+            <button class="cta-button" onclick="location.href='history-stories.html'">Learn More</button>
+        </div>
     </div>
 </section>
-<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px; margin-top: 40px; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);">
+
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px; margin-top: 40px;">
     <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
     <p>
         <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
