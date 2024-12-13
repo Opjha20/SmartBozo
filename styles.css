@@ -94,3 +94,23 @@ footer a:hover {
 .mobile-nav.active {
     display: flex;
 }
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #0066cc;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    text-align: left;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100%); /* Hide initially */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.mobile-nav.active {
+    display: flex;
+    transform: translateY(0); /* Slide in */
+}
