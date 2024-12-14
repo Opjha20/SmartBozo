@@ -34,7 +34,7 @@ nav a:hover {
     flex-direction: column;
     background-color: #0066cc;
     position: absolute; /* Ensures menu starts below navigation */
-    top: 70px; /* Matches the navigation bar height */
+    top: 100px; /* Matches the navigation bar height */
     left: 0;
     width: 100%;
     z-index: 9999;
