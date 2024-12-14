@@ -25,6 +25,17 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
 
+        .carousel-slide {
+            display: none;
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+
+        .carousel-slide:first-child {
+            display: block;
+        }
+
         .highlight {
             background-color: #e0f7fa;
             border: 2px solid #007bff;
@@ -39,10 +50,12 @@
 
         /* Hamburger Menu */
         .hamburger {
-            display: none;
+            display: flex;
             flex-direction: column;
             cursor: pointer;
-            margin-right: 15px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
 
         .hamburger div {
@@ -61,7 +74,6 @@
             left: 0;
             width: 100%;
             z-index: 9999;
-            text-align: left;
             padding: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
@@ -71,15 +83,10 @@
             text-decoration: none;
             padding: 10px 15px;
             border-bottom: 1px solid white;
-            display: block;
         }
 
         .mobile-nav.active {
             display: flex;
-        }
-
-        .tagline {
-            font-size: 0.9em;
         }
 
         @media (max-width: 768px) {
@@ -87,16 +94,8 @@
                 display: none;
             }
 
-            .hamburger {
-                display: flex;
-            }
-
             .tagline {
-                font-size: 0.9em;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 100%; /* Adjusts dynamically */
+                font-size: 0.7em;
             }
         }
 
@@ -105,35 +104,31 @@
                 display: none;
             }
         }
+
+        footer a {
+            font-size: 0.9em;
+            text-decoration: underline;
+            color: white;
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'G-VSN31WC4K9');
     </script>
 </head>
 <body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-
-        // Toggle the mobile navigation menu
-        hamburger.addEventListener("click", () => {
-            mobileNav.classList.toggle("active");
-        });
-    });
-</script>
-
 <header style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
     <div style="display: flex; align-items: center;">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
             <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
             <div>
                 <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <p class="tagline" style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
+                <p class="tagline" style="margin: 0; color: white;">Learn Smarter, Not Harder</p>
             </div>
         </a>
     </div>
@@ -143,7 +138,6 @@
         <div></div>
     </div>
 </header>
-
 <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="courses.html">Courses</a>
@@ -151,12 +145,10 @@
     <a href="contact.html">Contact Us</a>
     <a href="faqs.html">FAQs</a>
 </div>
-
 <section class="hero" style="text-align: center; padding: 30px 20px; background-color: #f1f1f1;">
     <h1 style="font-size: 2.5em; color: #0066cc;">Welcome to SmartBozo</h1>
     <p style="font-size: 1.2em; color: #555;">Learn Complex Topics in Simple Snippets Daily on WhatsApp!</p>
 </section>
-
 <div class="carousel">
     <div class="carousel-slide" style="background-color: #0066cc;">
         <h1>Economics Simplified</h1>
@@ -173,7 +165,6 @@
         <span class="dot" onclick="showSlide(1)"></span>
     </div>
 </div>
-
 <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
@@ -191,41 +182,17 @@
     setInterval(() => {
         showSlide((currentSlide + 1) % slides.length);
     }, 3000);
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        // Toggle the mobile navigation menu
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+        });
+    });
 </script>
-
-<style>
-    /* Dots Styling */
-    .carousel-dots {
-        margin-top: 20px;
-    }
-
-    .dot {
-        height: 12px;
-        width: 12px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .dot.active {
-        background-color: #007bff;
-    }
-
-    .carousel-slide {
-        display: none;
-        text-align: center;
-        padding: 50px;
-        color: white;
-    }
-
-    .carousel-slide:first-child {
-        display: block;
-    }
-</style>
-
 
 <section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
     <h2 style="font-size: 2em; margin-bottom: 20px;">Popular Courses</h2>
@@ -278,19 +245,16 @@
     </div>
 </section>
 
-<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
-    <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
-    <p>
-        <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
-        <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a>
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+    <p style="margin: 0;">
+        <a href="index.html">Home</a> |
+        <a href="courses.html">Courses</a> |
+        <a href="testimonials.html">Testimonials</a> |
+        <a href="contact.html">Contact Us</a> |
+        <a href="faqs.html">FAQs</a> |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-of-service.html">Terms of Service</a>
     </p>
-    <div class="footer-links" style="font-size: 0.8em; margin-top: 10px;">
-        <a href="index.html" style="color: white; margin: 0 5px;">Home</a> |
-        <a href="courses.html" style="color: white; margin: 0 5px;">Courses</a> |
-        <a href="testimonials.html" style="color: white; margin: 0 5px;">Testimonials</a> |
-        <a href="contact.html" style="color: white; margin: 0 5px;">Contact Us</a> |
-        <a href="faqs.html" style="color: white; margin: 0 5px;">FAQs</a>
-    </div>
 </footer>
 </body>
 </html>
