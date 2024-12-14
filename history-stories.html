@@ -3,66 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Stories - SmartBozo</title>
+    <title>Courses - SmartBozo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Button Styling */
         .cta-button {
-            padding: 10px 20px;
-            background: linear-gradient(to right, #005bb5, #007bff); /* Gradient matching site theme */
+            padding: 8px 15px;
+            background: linear-gradient(to right, #005bb5, #007bff);
             color: white;
             border: none;
             border-radius: 20px;
-            font-size: 1em;
+            font-size: 0.9em;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button:hover {
-            background: linear-gradient(to right, #007bff, #005bb5); /* Reversed gradient on hover */
+            background: linear-gradient(to right, #007bff, #005bb5);
             transform: scale(1.05);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
+		/* Highlight Styles */
+        .highlight {
+            background-color: #e0f7fa;
+            border: 2px solid #007bff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-custom {
+            background-color: #d0f0c0;
+            border: 2px solid #28a745;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hamburger Menu Styling */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            background-color: white;
+            height: 3px;
+            width: 25px;
+            margin: 4px 0;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background-color: #0066cc;
+            position: absolute;
+            top: 100px; /* Matches the height of the navigation bar */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-bottom: 1px solid white;
+            display: block;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+            transform: translateY(0);
+        }
     </style>
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-VSN31WC4K9');
+    </script>
 </head>
 <body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-
-        // Toggle the mobile navigation menu
-        hamburger.addEventListener("click", () => {
-            if (mobileNav.classList.contains("active")) {
-                mobileNav.style.transform = "translateY(-100%)"; // Slide out
-                setTimeout(() => mobileNav.classList.remove("active"), 300); // Wait for animation
-            } else {
-                mobileNav.classList.add("active");
-                mobileNav.style.transform = "translateY(0)"; // Slide in
-            }
-        });
-    });
-</script>
-
-
 <header style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
     <div style="display: flex; align-items: center;">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
             <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
             <div>
                 <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <!-- Ensure this paragraph has white color -->
-                <p style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
+                <p class="tagline" style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
             </div>
         </a>
     </div>
-    <nav class="desktop-nav" style="display: flex; gap: 15px; align-items: center;">
-        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
-        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
-        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
-        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
-        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
-    </nav>
     <div class="hamburger" id="hamburger">
         <div></div>
         <div></div>
@@ -88,10 +124,26 @@
 
 <footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
     <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
-    <p>
+    <div style="margin-top: 10px;">
+	    <a href="index.html" style="color: white; text-decoration: underline; margin-right: 15px;">Home</a>
+		<a href="courses.html" style="color: white; text-decoration: underline; margin-right: 15px;">Courses</a>
+		<a href="testimonials.html" style="color: white; text-decoration: underline; margin-right: 15px;">Testimonials</a>
+		<a href="contact.html" style="color: white; text-decoration: underline; margin-right: 15px;">Contact Us</a>
+		<a href="faqs.html" style="color: white; text-decoration: underline; margin-right: 15px;">FAQs</a>
         <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
-        <a href="terms-of-service.html" style="color: white; text-decoration: underline;">Terms of Service</a>
-    </p>
+        <a href="terms-of-service.html" style="color: white; text-decoration: underline; margin-right: 15px;">Terms of Service</a>
+    </div>
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+        });
+    });
+</script>
 </body>
 </html>
+
