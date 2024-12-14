@@ -77,6 +77,39 @@
             display: flex;
             transform: translateY(0);
         }
+		 /* Testimonials Styling */
+        .testimonials-section {
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .testimonial-card {
+            width: calc(50% - 20px); /* Two columns */
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .testimonial-card h3 {
+            font-size: 1.2em;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        .testimonial-card p {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .testimonial-card {
+                width: 100%; /* Single column for smaller screens */
+            }
+        }
     </style>
 	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
     <script>
@@ -113,7 +146,7 @@
     <a href="faqs.html">FAQs</a>
 </div>
 
-<!-- Testimonials Section -->
+    <!-- Testimonials Section -->
     <section class="testimonials-section">
         <h2 style="text-align: center; font-size: 2em; color: #0066cc; margin-bottom: 20px;">What Our Users Say</h2>
         <div class="testimonials-container">
@@ -151,37 +184,6 @@
             </div>
         </div>
     </section>
-
-<section style="text-align: center; padding: 40px; background-color: #f1f1f1;">
-    <h1 style="color: #0066cc;">What Our Learners Say</h1>
-    <p style="font-size: 1.2em; color: #555;">Read real stories from students who love SmartBozo!</p>
-    <div class="testimonials-container">
-        <!-- Left Column -->
-        <div class="testimonial-column">
-            <div class="testimonial-card">
-                <p><b>Rahul:</b> "SmartBozo's daily snippets make learning so easy and fun. I look forward to every snippet!"</p>
-            </div>
-            <div class="testimonial-card">
-                <p><b>Priya:</b> "Economics has always been hard for me, but now I understand it so well. Thank you, SmartBozo!"</p>
-            </div>
-            <div class="testimonial-card">
-                <p><b>Anjali:</b> "The Vedic Math course made calculations so much faster for me. Highly recommended!"</p>
-            </div>
-        </div>
-        <!-- Right Column -->
-        <div class="testimonial-column">
-            <div class="testimonial-card">
-                <p><b>Vikram:</b> "Physics Fun is the best! The concepts are explained in such a practical and enjoyable way."</p>
-            </div>
-            <div class="testimonial-card">
-                <p><b>Megha:</b> "I subscribed to Space Exploration, and it's mind-blowing. Every snippet is fascinating."</p>
-            </div>
-            <div class="testimonial-card">
-                <p><b>Arjun:</b> "SmartBozo has made learning so convenient and interesting. Highly recommend it to students."</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
     <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
