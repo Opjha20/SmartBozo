@@ -1,12 +1,10 @@
-<!-- navigation.html -->
 <header style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
     <div style="display: flex; align-items: center;">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
             <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
             <div>
                 <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <!-- Ensure this paragraph has white color -->
-                <p style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
+                <p style="margin: 0; font-size: 0.9em; color: white; white-space: nowrap;">Learn Smarter, Not Harder</p>
             </div>
         </a>
     </div>
@@ -30,17 +28,25 @@
     <a href="contact.html">Contact Us</a>
     <a href="faqs.html">FAQs</a>
 </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const hamburger = document.getElementById('hamburger');
         const mobileNav = document.getElementById('mobileNav');
 
+        // Toggle the mobile navigation menu
         hamburger.addEventListener("click", () => {
-            mobileNav.classList.toggle("active");
+            if (mobileNav.classList.contains("active")) {
+                mobileNav.style.transform = "translateY(-100%)"; // Slide out
+                setTimeout(() => mobileNav.classList.remove("active"), 300); // Wait for animation
+            } else {
+                mobileNav.classList.add("active");
+                mobileNav.style.transform = "translateY(0)"; // Slide in
+            }
         });
     });
-	
 </script>
+
 <style>
     /* Hamburger Menu */
     .hamburger {
@@ -59,8 +65,8 @@
         flex-direction: column;
         background-color: #0066cc;
         padding: 10px;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 70px; /* Adjusted to align below header */
         left: 0;
         width: 100%;
         z-index: 999;
@@ -83,6 +89,13 @@
         }
         .mobile-nav.active {
             display: flex;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+    }
+    @media (min-width: 769px) {
+        .mobile-nav {
+            display: none;
         }
     }
 </style>
