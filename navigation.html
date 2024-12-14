@@ -1,26 +1,3 @@
-<header style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
-    <div style="display: flex; align-items: center;">
-        <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
-            <div>
-                <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <p style="margin: 0; font-size: 0.9em; color: white; white-space: nowrap;">Learn Smarter, Not Harder</p>
-            </div>
-        </a>
-    </div>
-    <nav class="desktop-nav" style="display: flex; gap: 15px; align-items: center;">
-        <a href="index.html" style="color: white; text-decoration: none; font-size: 1.2em;">Home</a>
-        <a href="courses.html" style="color: white; text-decoration: none; font-size: 1.2em;">Courses</a>
-        <a href="testimonials.html" style="color: white; text-decoration: none; font-size: 1.2em;">Testimonials</a>
-        <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2em;">Contact Us</a>
-        <a href="faqs.html" style="color: white; text-decoration: none; font-size: 1.2em;">FAQs</a>
-    </nav>
-    <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</header>
 <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="courses.html">Courses</a>
@@ -34,68 +11,55 @@
         const hamburger = document.getElementById('hamburger');
         const mobileNav = document.getElementById('mobileNav');
 
-        // Toggle the mobile navigation menu
         hamburger.addEventListener("click", () => {
             if (mobileNav.classList.contains("active")) {
                 mobileNav.style.transform = "translateY(-100%)"; // Slide out
                 setTimeout(() => mobileNav.classList.remove("active"), 300); // Wait for animation
             } else {
                 mobileNav.classList.add("active");
-                mobileNav.style.transform = "translateY(0)"; // Slide in
+                mobileNav.style.transform = "translateY(70px)"; // Slide in just below header
             }
         });
     });
 </script>
 
 <style>
-    /* Hamburger Menu */
     .hamburger {
-        display: none;
+        display: flex;
         flex-direction: column;
         cursor: pointer;
+        margin-right: 15px;
     }
+
     .hamburger div {
         background-color: white;
         height: 3px;
         width: 25px;
         margin: 4px 0;
     }
+
     .mobile-nav {
         display: none;
         flex-direction: column;
         background-color: #0066cc;
-        padding: 10px;
-        position: fixed;
-        top: 70px; /* Adjusted to align below header */
+        position: absolute;
+        top: 70px;
         left: 0;
         width: 100%;
-        z-index: 999;
+        z-index: 9999;
+        text-align: left;
+        padding: 10px 0;
     }
+
     .mobile-nav a {
         color: white;
         text-decoration: none;
         padding: 10px 15px;
         border-bottom: 1px solid white;
+        display: block;
     }
-    @media (max-width: 768px) {
-        nav {
-            display: none;
-        }
-        .hamburger {
-            display: flex;
-        }
-        .mobile-nav {
-            display: none;
-        }
-        .mobile-nav.active {
-            display: flex;
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-    }
-    @media (min-width: 769px) {
-        .mobile-nav {
-            display: none;
-        }
+
+    .mobile-nav.active {
+        display: flex;
     }
 </style>
