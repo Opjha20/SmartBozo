@@ -6,7 +6,25 @@
     <title>SmartBozo - Learn Smarter</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Highlight Styles */
+        /* Button Styling */
+        .cta-button {
+            padding: 8px 15px;
+            background: linear-gradient(to right, #005bb5, #007bff);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, #007bff, #005bb5);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+		/* Highlight Styles */
         .highlight {
             background-color: #e0f7fa;
             border: 2px solid #007bff;
@@ -114,6 +132,56 @@
         <span class="dot" onclick="showSlide(1)"></span>
     </div>
 </div>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides[currentSlide].style.display = 'none';
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].style.display = 'block';
+        dots[currentSlide].classList.add('active');
+    }
+
+    // Auto-slide functionality
+    setInterval(() => {
+        showSlide((currentSlide + 1) % slides.length);
+    }, 3000);
+</script>
+<style>
+    /* Dots Styling */
+    .carousel-dots {
+        margin-top: 20px;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+        background-color: #007bff;
+    }
+
+    .carousel-slide {
+        display: none;
+        text-align: center;
+        padding: 50px;
+        color: white;
+    }
+
+    .carousel-slide:first-child {
+        display: block;
+    }
+</style>
 <section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
     <h2 style="font-size: 2em; margin-bottom: 20px;">Popular Courses</h2>
     <div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -168,9 +236,13 @@
 <footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
     <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
     <div style="margin-top: 10px;">
+	    <a href="index.html" style="color: white; text-decoration: underline; margin-right: 15px;">Home</a>
+		<a href="courses.html" style="color: white; text-decoration: underline; margin-right: 15px;">Courses</a>
+		<a href="testimonials.html" style="color: white; text-decoration: underline; margin-right: 15px;">Testimonials</a>
+		<a href="contact.html" style="color: white; text-decoration: underline; margin-right: 15px;">Contact Us</a>
+		<a href="faqs.html" style="color: white; text-decoration: underline; margin-right: 15px;">FAQs</a>
         <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
         <a href="terms-of-service.html" style="color: white; text-decoration: underline; margin-right: 15px;">Terms of Service</a>
-        <a href="index.html" style="color: white; text-decoration: underline;">Home</a>
     </div>
 </footer>
 <script>
