@@ -4,26 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBozo - Learn Smarter</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Button Styling */
         .cta-button {
-            padding: 8px 15px;
-            background: linear-gradient(to right, #005bb5, #007bff);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            font-size: 0.9em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+        padding: 12px 20px;
+        background: linear-gradient(to right, #005bb5, #007bff);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+		margin: 10px 0; /* Reduce space between button and next element */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Added space below button */
+		text-decoration: none;
+    }
 
         .cta-button:hover {
             background: linear-gradient(to right, #007bff, #005bb5);
             transform: scale(1.05);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
+
+        .cta-subtext {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+			margin-bottom: 5px;
+        }
+		/* Slim Green Button Styling */
+        .cta-button-slim {
+            padding: 6px 15px; /* Reduced padding for a slimmer look */
+            background: linear-gradient(to right, #28a745, #34d058); /* Green gradient */
+            color: white;
+            border: none;
+            border-radius: 20px; /* Slightly slimmer border radius */
+            font-size: 0.85em; /* Smaller font size */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 8px 0; /* Slightly reduced vertical margin */
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+            text-decoration: none;
+        }
+
+        .cta-button-slim:hover {
+            background: linear-gradient(to right, #34d058, #28a745); /* Reverse gradient on hover */
+            transform: scale(1.03); /* Slight scaling effect */
+            box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+
 		/* Highlight Styles */
         .highlight {
             background-color: #e0f7fa;
@@ -36,8 +70,7 @@
             border: 2px solid #28a745;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-
-        /* Hamburger Menu Styling */
+		/* Hamburger Menu Styling */
         .hamburger {
             display: flex;
             flex-direction: column;
@@ -45,9 +78,9 @@
         }
         .hamburger div {
             background-color: white;
-            height: 3px;
-            width: 25px;
-            margin: 4px 0;
+            height: 2px;
+            width: 20px;
+            margin: 3px 0;
         }
 
         .mobile-nav {
@@ -77,6 +110,112 @@
             display: flex;
             transform: translateY(0);
         }
+        /* Section Styling */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Add balanced padding */
+			text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px 10px; /* Reduce padding to minimize blank space */
+            margin: 0; /* Remove default margins */
+            box-sizing: border-box; /* Ensure padding is part of the height */
+}
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 10px 0; /* Reduce vertical margins */
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 5px 0 20px; /* Reduce top margin and add consistent spacing with the button */
+        }
+        #what-we-offer {
+            text-align: center;
+            background-color: #d0f0c0; /* Darker background for better contrast */
+        }
+		#what-we-offer h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+		#why-better {
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        #why-better h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+		table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        table td {
+            background-color: #f9f9f9;
+        }
+
+        table tr td:first-child {
+            background-color: #f0f8ff;
+            font-weight: bold;
+            color: #333;
+        }
+
+        table tr td:last-child {
+            background-color: #d0f0c0;
+            font-weight: bold;
+            color: #333;
+        }
+		#how-it-works {
+            text-align: center;
+            background-color: #d0f0c0; /* Darker background for better contrast */
+        }
+        #how-it-works h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .offer-grid, .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .offer-item, .step {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .offer-item img, .step img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
     <script>
@@ -89,14 +228,17 @@
     </script>
 </head>
 <body>
-<header style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #0066cc; color: white;">
+<header style="position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: white;
+        height: auto;">
     <div style="display: flex; align-items: center;">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
-            <div>
-                <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <p class="tagline" style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
-            </div>
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 50px; margin-right: 10px; max-width: 100%;">
         </a>
     </div>
     <div class="hamburger" id="hamburger">
@@ -112,9 +254,89 @@
     <a href="contact.html">Contact Us</a>
     <a href="faqs.html">FAQs</a>
 </div>
-<section class="hero" style="text-align: center; padding: 30px 20px; background-color: #f1f1f1;">
-    <h1 style="font-size: 2.5em; color: #0066cc;">Welcome to SmartBozo</h1>
-    <p style="font-size: 1.2em; color: #555;">Learn Complex Topics in Simple Snippets Daily on WhatsApp!</p>
+<!-- Hero Section -->
+<section class="hero section">
+    <h1>Learn Smarter, Not Harder</h1>
+    <p>Daily bite-sized knowledge delivered on WhatsApp. Simplify your learning journey in just 5 minutes a day.</p>
+    <a class="cta-button" href="https://wa.me/917977047646?text=Start%20my%20learning%20program" target="_blank">Start Learning Now</a>
+    <p class="cta-subtext">No spam. Cancel anytime.</p>
+</section>
+
+<!-- What We Offer -->
+<section id="what-we-offer" class="section">
+    <h2>Who Can Benefit From SmartBozo?</h2>
+    <div class="offer-grid">
+        <div class="offer-item">
+            <i class="fas fa-user-graduate"></i> <!-- Font Awesome Icon -->
+            <h3>Students</h3>
+            <p>Get ahead in school with fun learning.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20learning%20program" target="_blank">Start Learning Now</a>
+        </div>
+        <div class="offer-item">
+            <i class="fas fa-briefcase"></i> <!-- Font Awesome Icon -->
+            <h3>Professionals</h3>
+            <p>Build skills with a simple schedule in depth.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20learning%20program" target="_blank">Start Learning Now</a>
+        </div>
+        <div class="offer-item">
+            <i class="fas fa-child"></i> <!-- Font Awesome Icon -->
+            <h3>Parents</h3>
+            <p>Help your child grow smarter, effortlessly.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20learning%20program" target="_blank">Start Learning Now</a>
+        </div>
+        <div class="offer-item">
+            <i class="fas fa-lightbulb"></i> <!-- Font Awesome Icon -->
+            <h3>Curious Minds</h3>
+            <p>Discover new ideas daily and be the smartes in the room.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20learning%20program" target="_blank">Start Learning Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Why It's Better -->
+<section id="why-better" class="section">
+    <h2>Why SmartBozo Stands Out</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Traditional Learning</th>
+                <th>SmartBozo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Long, time-consuming courses</td>
+                <td>5-minute daily snippets</td>
+            </tr>
+            <tr>
+                <td>Expensive subscription fees</td>
+                <td>Affordable and flexible</td>
+            </tr>
+            <tr>
+                <td>Generic, one-size-fits-all</td>
+                <td>Tailored to your needs</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- How It Works -->
+<section id="how-it-works" class="section">
+    <h2>3 Simple Steps to Start Learning Smarter</h2>
+    <div class="steps">
+        <div class="step">
+            <h3>Step 1: Subscribe via WhatsApp</h3>
+            <p>Click the link and join our WhatsApp community.</p>
+        </div>
+        <div class="step">
+            <h3>Step 2: Choose Your Topic</h3>
+            <p>Select courses or interests (Economics, Science, etc.).</p>
+        </div>
+        <div class="step">
+            <h3>Step 3: Receive Daily Snippets</h3>
+            <p>Enjoy bite-sized lessons, quizzes, and more!</p>
+        </div>
+    </div>
 </section>
 <div class="carousel">
     <div class="carousel-slide" style="background-color: #0066cc;">

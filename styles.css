@@ -103,6 +103,16 @@ footer a {
 footer a:hover {
     text-decoration: none;
 }
+.section {
+    padding: 30px 15px; /* Consistent top and bottom padding */
+    text-align: center; /* Ensures text is centered across sections */
+    box-sizing: border-box; /* Ensures padding is included within the section size */
+}
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+    }
+}
 /* Hamburger Menu Styling */
 .hamburger {
     display: none;
@@ -167,3 +177,4 @@ footer a:hover {
         display: none; /* Hides mobile navigation for larger screens */
     }
 }
+

@@ -1,11 +1,14 @@
-<header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; color: white; background-color: #0066cc;">
+<header style="position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: white;
+        height: auto;">
     <div style="display: flex; align-items: center;">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="logo.png" alt="SmartBozo Logo" style="height: 70px; margin-right: 15px;">
-            <div>
-                <h1 style="margin: 0; color: white;">SmartBozo</h1>
-                <p class="tagline" style="margin: 0; font-size: 0.9em; color: white;">Learn Smarter, Not Harder</p>
-            </div>
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 50px; margin-right: 10px; max-width: 100%;">
         </a>
     </div>
     <div class="hamburger" id="hamburger">
@@ -41,39 +44,44 @@
     });
 </script>
 <style>
-    /* Hamburger Menu */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: absolute;
-        top: 20px; /* Adjusted for proper alignment */
-        right: 20px;
-    }
+    /* Hamburger Menu Styling */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            background-color: white;
+            height: 2px;
+            width: 20px;
+            margin: 3px 0;
+        }
 
-    .hamburger div {
-        background-color: white;
-        height: 3px;
-        width: 25px;
-        margin: 4px 0;
-    }
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background-color: #0066cc;
+            position: absolute;
+            top: 100px; /* Matches the height of the navigation bar */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
 
-    .mobile-nav {
-        display: none;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-        position: absolute;
-        top: 100px; /* Matches the height of the navigation bar */
-        left: 0;
-        width: 100%;
-        background-color: #0066cc;
-        z-index: 999;
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-bottom: 1px solid white;
+            display: block;
+        }
 
-    .mobile-nav.active {
-        display: flex;
-        transform: translateY(0);
-    }
+        .mobile-nav.active {
+            display: flex;
+            transform: translateY(0);
+        }
 </style>
