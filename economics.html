@@ -3,27 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - SmartBozo</title>
+    <title>SmartBozo - Learn Smarter</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Button Styling */
         .cta-button {
-            padding: 8px 15px;
-            background: linear-gradient(to right, #005bb5, #007bff);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            font-size: 0.9em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+        padding: 12px 20px;
+        background: linear-gradient(to right, #005bb5, #007bff);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+		margin: 10px 0; /* Reduce space between button and next element */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Added space below button */
+		text-decoration: none;
+    }
 
         .cta-button:hover {
             background: linear-gradient(to right, #007bff, #005bb5);
             transform: scale(1.05);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
+
+        .cta-subtext {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+			margin-bottom: 5px;
+        }
+		/* Slim Green Button Styling */
+        .cta-button-slim {
+            padding: 6px 15px; /* Reduced padding for a slimmer look */
+            background: linear-gradient(to right, #28a745, #34d058); /* Green gradient */
+            color: white;
+            border: none;
+            border-radius: 20px; /* Slightly slimmer border radius */
+            font-size: 0.85em; /* Smaller font size */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 8px 0; /* Slightly reduced vertical margin */
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+            text-decoration: none;
+        }
+
+        .cta-button-slim:hover {
+            background: linear-gradient(to right, #34d058, #28a745); /* Reverse gradient on hover */
+            transform: scale(1.03); /* Slight scaling effect */
+            box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+
 		/* Highlight Styles */
         .highlight {
             background-color: #e0f7fa;
@@ -36,8 +70,7 @@
             border: 2px solid #28a745;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-
-        /* Hamburger Menu Styling */
+		/* Hamburger Menu Styling */
         .hamburger {
             display: flex;
             flex-direction: column;
@@ -77,8 +110,97 @@
             display: flex;
             transform: translateY(0);
         }
+        /* Section Styling */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Add balanced padding */
+			text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px 10px; /* Reduce padding to minimize blank space */
+            margin: 0; /* Remove default margins */
+            box-sizing: border-box; /* Ensure padding is part of the height */
+}
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 10px 0; /* Reduce vertical margins */
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 5px 0 20px; /* Reduce top margin and add consistent spacing with the button */
+        }
+		table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        table td {
+            background-color: #f9f9f9;
+        }
+
+        table tr td:first-child {
+            background-color: #f0f8ff;
+            font-weight: bold;
+            color: #333;
+        }
+
+        table tr td:last-child {
+            background-color: #d0f0c0;
+            font-weight: bold;
+            color: #333;
+        }
+		#economics-course-benefits {
+            text-align: center;
+            background-color: #d0f0c0; /* Darker background for better contrast */
+        }
+        #economics-course-benefits h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .offer-grid, .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .offer-item, .step {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .offer-item img, .step img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
     </style>
-	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -115,6 +237,37 @@
     <a href="contact.html">Contact Us</a>
     <a href="faqs.html">FAQs</a>
 </div>
+<!-- Hero Section -->
+<section class="hero section">
+    <h1>Economics Simplified – Daily Snippets</h1>
+    <p>Understand economic news and concepts easily with daily bite-sized lessons delivered to WhatsApp!.</p>
+    <a class="cta-button" href="https://wa.me/917977047646?text=Start%20my%20economics%20program" target="_blank">Start Learning for Free</a>
+    <p class="cta-subtext">No spam. Cancel anytime.</p>
+</section>
+<!-- Why Economics With Us -->
+<section id="economics-course-benefits" class="section">
+    <h2>Why Learn Economics with Us?</h2>
+    <div class="steps">
+        <div class="step">
+            <h3>Daily updates from top news sources like Economic Times.</h3>
+            <p>Stay informed with carefully curated daily updates from trusted sources like Economic Times and Financial Express, breaking down the most relevant and impactful news into digestible insights.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20economics%20program" target="_blank">Start Learning for Free</a>
+			<h3>        </h3>
+        </div>
+        <div class="step">
+            <h3>Simple explanations of complex concepts. One article a day</h3>
+            <p>Complex economic concepts are explained in a simple, engaging, and relatable manner, making it easier than ever to connect the dots between global events and their real-world implications.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20economics%20program" target="_blank">Start Learning for Free</a>
+			<h3>        </h3>
+        </div>
+        <div class="step">
+            <h3>Perfect for students, professionals, and curious minds.</h3>
+            <p>Whether you're a student in a learning phase, a professional looking to stay ahead in your field, or a curious learner exploring the world of economics, our course is tailored to fit your needs.</p>
+			<a class="cta-button-slim" href="https://wa.me/917977047646?text=Start%20my%20economics%20program" target="_blank">Start Learning for Free</a>
+			<h3>        </h3>
+        </div>
+    </div>
+</section>
 <section style="text-align: center; padding: 40px; background-color: #f1f1f1;">
     <h1 style="color: #0066cc;">Economics Simplified</h1>
     <p style="font-size: 1.2em; color: #555;">Understand how the world works through economics. Daily lessons cover topics like inflation, trade, and policies in just 5 minutes.</p>
@@ -124,7 +277,6 @@
     </div>
     <button class="cta-button" onclick="location.href='https://wa.me/919769612361?text=I%20want%20to%20learn%20Economics!'">Start Learning Economics</button>
 </section>
-
 <footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
     <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
     <div style="margin-top: 10px;">
@@ -137,16 +289,5 @@
         <a href="terms-of-service.html" style="color: white; text-decoration: underline; margin-right: 15px;">Terms of Service</a>
     </div>
 </footer>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-
-        hamburger.addEventListener("click", () => {
-            mobileNav.classList.toggle("active");
-        });
-    });
-</script>
 </body>
 </html>
-
