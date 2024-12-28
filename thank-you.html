@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You – SmartBozo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Section Styling */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Add balanced padding */
+			text-align: center;
+            background-color: #d0f0c0;
+            padding: 20px 10px; /* Reduce padding to minimize blank space */
+            margin: 0; /* Remove default margins */
+            box-sizing: border-box; /* Ensure padding is part of the height */
+}
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 10px 0; /* Reduce vertical margins */
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 5px 0 20px; /* Reduce top margin and add consistent spacing with the button */
+        }
+		/* Button Styling */
+        .cta-button {
+            padding: 8px 15px;
+            background: linear-gradient(to right, #005bb5, #007bff);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, #007bff, #005bb5);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+		/* Highlight Styles */
+        .highlight {
+            background-color: #e0f7fa;
+            border: 2px solid #007bff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-custom {
+            background-color: #d0f0c0;
+            border: 2px solid #28a745;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hamburger Menu Styling */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            background-color: white;
+            height: 2px;
+            width: 20px;
+            margin: 3px 0;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background-color: #0066cc;
+            position: absolute;
+            top: 100px; /* Matches the height of the navigation bar */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-bottom: 1px solid white;
+            display: block;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+            transform: translateY(0);
+        }
+    </style>
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSN31WC4K9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-VSN31WC4K9');
+    </script>
+</head>
+<body>
+<header style="position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: white;
+        height: auto;">
+    <div style="display: flex; align-items: center;">
+        <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+            <img src="logo.png" alt="SmartBozo Logo" style="height: 50px; margin-right: 10px; max-width: 100%;">
+        </a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+<div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="faqs.html">FAQs</a>
+</div>
+
+<section class="hero">
+    <h1>Thank You for Joining Us!</h1>
+    <p>You’re all set to start learning Economics daily. Check your WhatsApp for your first lesson!</p>
+</section>
+
+<section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
+    <h2 style="font-size: 2em; margin-bottom: 20px;">Explore More Courses</h2>
+	<div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+        <div class="course-card highlight" style="padding: 20px; width: 250px; border-radius: 10px;">
+            <h3>Economics Simplified</h3>
+            <p>Daily article explanations with concepts from Economic Times or Financial Express.</p>
+            <button class="cta-button" onclick="location.href='economics.html'">Learn More</button>
+        </div>
+        <div class="course-card highlight-custom" style="padding: 20px; width: 250px; border-radius: 10px;">
+            <h3>Custom Courses</h3>
+            <p>Get a course tailored to your unique needs and preferences!</p>
+            <button class="cta-button" onclick="location.href='custom-course.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Vedic Math</h3>
+            <p>Speed up calculations with mental tricks.</p>
+            <button class="cta-button" onclick="location.href='vedic-math.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Space Exploration</h3>
+            <p>Discover the wonders of the universe.</p>
+            <button class="cta-button" onclick="location.href='space-exploration.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Everyday Finance</h3>
+            <p>Learn personal finance basics and taxes.</p>
+            <button class="cta-button" onclick="location.href='taxes-and-finance.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Physics Fun</h3>
+            <p>Understand physics with engaging examples.</p>
+            <button class="cta-button" onclick="location.href='physics-fun.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Political Science</h3>
+            <p>Understand how governments work.</p>
+            <button class="cta-button" onclick="location.href='political-science.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>Business Models</h3>
+            <p>Learn about different business models in a daily snippet.</p>
+            <button class="cta-button" onclick="location.href='business-models.html'">Learn More</button>
+        </div>
+        <div class="course-card" style="padding: 20px; width: 250px; background-color: white; border-radius: 10px;">
+            <h3>History Stories</h3>
+            <p>Discover an intriguing historical story daily.</p>
+            <button class="cta-button" onclick="location.href='history-stories.html'">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<footer style="background-color: #0066cc; color: white; text-align: center; padding: 20px;">
+    <p style="margin: 0;">© 2024 SmartBozo.com (part of JB Deals & Advisory)</p>
+    <div style="margin-top: 10px;">
+	    <a href="index.html" style="color: white; text-decoration: underline; margin-right: 15px;">Home</a>
+		<a href="courses.html" style="color: white; text-decoration: underline; margin-right: 15px;">Courses</a>
+		<a href="testimonials.html" style="color: white; text-decoration: underline; margin-right: 15px;">Testimonials</a>
+		<a href="contact.html" style="color: white; text-decoration: underline; margin-right: 15px;">Contact Us</a>
+		<a href="faqs.html" style="color: white; text-decoration: underline; margin-right: 15px;">FAQs</a>
+        <a href="privacy-policy.html" style="color: white; text-decoration: underline; margin-right: 15px;">Privacy Policy</a>
+        <a href="terms-of-service.html" style="color: white; text-decoration: underline; margin-right: 15px;">Terms of Service</a>
+    </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+        });
+    });
+</script>
+</body>
+</html>
