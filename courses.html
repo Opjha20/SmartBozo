@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - SmartBozo</title>
+    <title>Thank You – SmartBozo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Button Styling */
+        /* Section Styling */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Add balanced padding */
+			text-align: center;
+            background-color: #d0f0c0;
+            padding: 20px 10px; /* Reduce padding to minimize blank space */
+            margin: 0; /* Remove default margins */
+            box-sizing: border-box; /* Ensure padding is part of the height */
+}
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 10px 0; /* Reduce vertical margins */
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 5px 0 20px; /* Reduce top margin and add consistent spacing with the button */
+        }
+		/* Button Styling */
         .cta-button {
             padding: 8px 15px;
             background: linear-gradient(to right, #005bb5, #007bff);
@@ -116,13 +141,15 @@
     <a href="faqs.html">FAQs</a>
 </div>
 
-<section class="hero" style="text-align: center; padding: 30px 20px; background-color: #f1f1f1;">
-    <h1 style="font-size: 2.5em; color: #0066cc;">Available Courses</h1>
-    <p style="font-size: 1.2em; color: #555;">Explore our wide range of courses designed to make learning simple and fun.</p>
+<section class="hero">
+    <h1>Available Courses</h1>
+    <p>Explore our wide range of courses designed to make learning simple and fun.</p>
+	<div style="background-color: white; padding: 20px; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 80%; max-width: 500px;">
+        <p><b>As per Expert Educators:</b> Bite-sized learning, like daily concept breakdowns, mirrors ancient teaching methods where small, consistent lessons helped learners deeply grasp and retain knowledge over time.</p>
+    </div>
 </section>
-
 <section class="featured-courses" style="padding: 40px; text-align: center; background-color: #f9f9f9;">
-    <div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+	<div class="course-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
         <div class="course-card highlight" style="padding: 20px; width: 250px; border-radius: 10px;">
             <h3>Economics Simplified</h3>
             <p>Daily article explanations with concepts from Economic Times or Financial Express.</p>

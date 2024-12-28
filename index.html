@@ -418,6 +418,16 @@
 </footer>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
         const slides = document.querySelectorAll('.carousel-slide');
         const dotsContainer = document.getElementById('carouselDots');
         let currentSlide = 0;
@@ -457,6 +467,5 @@
         }, 3000);
     });
 </script>
-
 </body>
 </html>
